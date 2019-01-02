@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="p-2 mt-3">
+        <h6>Select a value</h6>
+        <form #formRef="ngForm">
+          <div *ngFor="let location of locations">
+            <input
+              [id]="location"
+              type="radio"
+              name="location"
+              [value]="location"
+              ngModel
+            >
+            <label [attr.for]="location" class="ml-2">{{location}}</label>
+          </div>
+        </form>
+      </div>
+      <div class="mt-2 p-2">
+        {{formRef.value | json}}
+      </div>
+      <hr/>
+      <p>Value: {{formRef.valid | json}}</p>
+    </div>
+  </div>
+</div>
