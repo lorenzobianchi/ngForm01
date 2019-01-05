@@ -10,7 +10,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RadioBtnFormComponent } from './radio-btn-form/radio-btn-form.component';
 import { SelectBtnFormComponent } from './select-btn-form/select-btn-form.component';
 import { ApiService } from './services/api.service';
-import { PostsComponent } from './posts/posts.component'
+import { PostsComponent } from './posts/posts.component';
+import { NewPostComponent } from './new-post/new-post.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PostsComponent } from './posts/posts.component'
     LoginFormComponent,
     RadioBtnFormComponent,
     SelectBtnFormComponent,
-    PostsComponent
+    PostsComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,

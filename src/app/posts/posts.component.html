@@ -1,3 +1,41 @@
-<p>
-  posts works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 p-2 mt-3">
+      <div class="w-100 d-flex flex-row justify-content-between">
+        <div class="flex-1">
+          <h2>Posts</h2>
+        </div>
+        <div class="flex-1 text-right">
+          <button class="btn btn-warning btn-sm" (click)="goNewPost()">Add new post</button>
+        </div>
+      </div>
+      <hr/>
+      <p *ngFor="let i of items">{{i}}</p>
+      <hr/>
+      <div class="p-2">
+        <div
+          class="card p-2 mb-2 bg-dark text-warning"
+          *ngFor="let post of posts$ | async">
+          <div class="w-100 d-flex flex-row justify-content-between">
+            <div class="flex-1">
+              <p class="text-success"><span class="text-white">TITLE: </span>{{post.title}}</p>
+            </div>
+            <div class="flex-1 text-right">
+              <p>{{post.id}}</p>
+            </div>
+          </div>
+          <p class="text-info"><span class="text-white">AUTHOR: </span>{{post.author}}</p>
+          <p><span class="text-white">BODY: </span>{{post.data.body}}</p>
+          <p class="text-danger">
+            <span class="text-white">NUMBERS: </span>
+            <span *ngFor="let n of post.data?.numbers">{{n}} </span>
+          </p>
+          <p class="text-primary">
+            <span class="text-white">NAMES: </span>
+            <span *ngFor="let n of post.data?.names">{{n}} </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RadioBtnFormComponent } from './radio-btn-form/radio-btn-form.component';
 import { SelectBtnFormComponent } from './select-btn-form/select-btn-form.component';
 import { PostsComponent } from './posts/posts.component';
+import { NewPostComponent } from './new-post/new-post.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'posts',
     component: PostsComponent
+  },
+  {
+    path: 'posts/add',
+    component: NewPostComponent
   }
 ];
 
