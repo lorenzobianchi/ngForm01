@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {  map } from 'rxjs/operators';
 
 import { ApiService } from '../services/api.service';
 
@@ -14,7 +13,7 @@ export class NewPostComponent implements OnInit {
   currentId: number;
 
   ngOnInit() {
-    const x = this.apiService.fetchPosts()
+    this.apiService.fetchPosts()
       .subscribe(d => {
         let data = d
         this.data$ = data;
@@ -26,9 +25,6 @@ export class NewPostComponent implements OnInit {
   }
 
   onSubmit(formValue) {
-    let id = this.apiService.fetchPosts().subscribe(d => {
-      console.log('id =>>', d);
-    });
     let newPost = {
         "id": this.currentId,
         "title": formValue.title,
