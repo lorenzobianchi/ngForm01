@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   title: string = 'ngForm01'
-    
+  dropdownOpen: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleDropdown() {
+    return this.dropdownOpen = !this.dropdownOpen
+  }
 }
