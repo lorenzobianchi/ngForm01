@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms'
 import { Routes, RouterModule } from '@angular/router';
 import { PostsComponent } from './posts.component';
 import { NewPostComponent } from '../new-post/new-post.component';
+import { PostComponent } from '../post/post.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,11 @@ const routes: Routes = [
   {
     path: 'add',
     component: NewPostComponent
-  }
+  },
+  {
+    path: ':id',
+    component: PostComponent
+  },
 ]
 
 
@@ -24,6 +29,10 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ PostsComponent, NewPostComponent ]
+  declarations: [
+    PostsComponent,
+    PostComponent,
+    NewPostComponent
+  ]
 })
 export class PostsModule { }
