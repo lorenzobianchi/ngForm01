@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   title: string = 'ngForm01'
   dropdownOpen: boolean = false;
+  navs = [
+    {url: 'posts/1', content: 'post 1'},
+    {url: 'posts/2', content: 'post 2'},
+    {url: 'posts/3', content: 'post 3'}
+  ]
 
   constructor() { }
 

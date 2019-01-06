@@ -18,7 +18,11 @@
           *ngFor="let post of posts$ | async">
           <div class="w-100 d-flex flex-row justify-content-between">
             <div class="flex-1">
-              <p class="text-success"><span class="text-white">TITLE: </span>{{post.title}}</p>
+              <p class="text-success">
+                <span class="text-white">
+                  TITLE: <a [routerLink]="['/posts', post.id]">{{post.title}}</a>
+                </span>
+              </p>
             </div>
             <div class="flex-1 text-right">
               <p>{{post.id}}</p>
