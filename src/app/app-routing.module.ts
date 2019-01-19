@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RadioBtnFormComponent } from './radio-btn-form/radio-btn-form.component';
 import { SelectBtnFormComponent } from './select-btn-form/select-btn-form.component';
+import { ClockComponent } from './clock/clock.component';
 
 const routes: Routes = [
   {
@@ -18,9 +19,13 @@ const routes: Routes = [
     component: SelectBtnFormComponent
   },
   {
+    path: 'clock',
+    component: ClockComponent
+  },
+  {
     path: 'posts',
     loadChildren: './posts/posts.module#PostsModule'
-  },
+  }
 ];
 
 @NgModule({

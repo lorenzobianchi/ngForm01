@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 text-center p-2 mt-3">
+      <h2 class="text-danger">CLOCK 1</h2>
+      <h4>{{clock | async | date: 'shortTime'}}</h4>
+      <button class="btn btn-success mt-4" (click)="click$.next()">Update</button>
+      <h2 class="text-danger">CLOCK 2</h2>
+      <h4>{{clock2$ | async }}</h4>
+    </div>
+  </div>
+</div>

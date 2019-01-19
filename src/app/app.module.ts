@@ -10,6 +10,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RadioBtnFormComponent } from './radio-btn-form/radio-btn-form.component';
 import { SelectBtnFormComponent } from './select-btn-form/select-btn-form.component';
 import { ApiService } from './services/api.service';
+import { ClockComponent } from './clock/clock.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ApiService } from './services/api.service';
     LoginFormComponent,
     RadioBtnFormComponent,
     SelectBtnFormComponent,
+    ClockComponent,
   ],
   imports: [
     BrowserModule,
