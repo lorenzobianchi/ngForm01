@@ -23,11 +23,11 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   fetchPosts(): Observable<any> {
-    return this.http.get(this.postEndPoint)
+    return this.http.get(this.postEndPoint);
   }
 
   addNewPost(newPost: any) {
-    return this.http.post(this.postEndPoint, newPost)
+    return this.http.post(this.postEndPoint, newPost);
   }
 
 }

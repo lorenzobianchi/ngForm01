@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 mt-4">
+        <h2>Angular Services</h2>
+        <app-person></app-person>
+        <button 
+          (click)="this.childVisible = !this.childVisible" 
+          class="btn btn-dark">
+          TOGGLE CHILD
+        </button>
+        </div>
+        <div class="col-lg-12 mt-4">
+            <app-person-edit></app-person-edit>
+        </div>
+        <div class="col-lg-12 mt-4">
+            <app-child *ngIf="childVisible"></app-child>
+        </div>
+    </div>
+  </div>

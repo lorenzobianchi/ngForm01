@@ -15,7 +15,7 @@ export class NewPostComponent implements OnInit {
   ngOnInit() {
     this.apiService.fetchPosts()
       .subscribe(d => {
-        let data = d
+        const data = d;
         this.data$ = data;
         this.currentId = Math.max(...data.map(x => x.id)) + 1;
         console.log('data =>', this.data$);
@@ -25,32 +25,32 @@ export class NewPostComponent implements OnInit {
   }
 
   onSubmit(formValue) {
-    let newPost = {
-        "id": this.currentId,
-        "title": formValue.title,
-        "author": formValue.author,
-        "data": {
-            "numbers": [
-                1,
-                2,
-                4,
-                8,
-                11,
-                0.4
-            ],
-            "names": [
-                "John",
-                "Sara",
-                "Ed",
-                "Jack"
-            ],
-            "body": formValue.body
-        }
-      };
-      this.apiService.addNewPost(newPost).subscribe(
-      (data: any) => {
-        console.log(data);
-      }
-    )
+    // const newPost = {
+    //     "id": this.currentId,
+    //     "title": formValue.title,
+    //     "author": formValue.author,
+    //     "data": {
+    //         "numbers": [
+    //             1,
+    //             2,
+    //             4,
+    //             8,
+    //             11,
+    //             0.4
+    //         ],
+    //         "names": [
+    //             "John",
+    //             "Sara",
+    //             "Ed",
+    //             "Jack"
+    //         ],
+    //         "body": formValue.body
+    //     }
+    //   };
+    //   this.apiService.addNewPost(newPost).subscribe(
+    //   (data: any) => {
+    //     console.log(data);
+    //   }
+    // );
   }
 }

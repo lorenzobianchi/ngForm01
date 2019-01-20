@@ -23,13 +23,22 @@
            Posts
         </a>
       </li>
-      <li class="nav-item" *ngFor="let nav of navs">
+      <!-- <li class="nav-item" *ngFor="let nav of navs">
         <a
           class="nav-link"
           [routerLink]="nav.url"
           [routerLinkActiveOptions]="{exact:true}"
           routerLinkActive="active">
            {{nav.content}}
+        </a>
+      </li> -->
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="people"
+          [routerLinkActiveOptions]="{exact:true}"
+          routerLinkActive="active">
+           People
         </a>
       </li>
       <li class="nav-item dropdown" >

@@ -1,0 +1,4 @@
+<pre>{{ peopleService.getPeople() | json }}</pre>
+<br/>
+<input type="text" #personName />
+<button (click)="setPerson(personName.value)">Set name</button>
