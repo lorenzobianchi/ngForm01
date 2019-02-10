@@ -15,6 +15,7 @@ import { ClockComponent } from './clock/clock.component';
 import { PeopleModule } from './people/people.module';
 import { NewLoggerService } from './services/new-logger.service';
 import { ConsoleWriterService } from './services/console-writer.service';
+import { TableComponent } from './table/table.component';
 
 const simpleLogger = {
   log(msg: string) {
@@ -34,6 +35,7 @@ const loggerFactory = (writer: ConsoleWriterService) => {
     RadioBtnFormComponent,
     SelectBtnFormComponent,
     ClockComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,

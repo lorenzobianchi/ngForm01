@@ -5,6 +5,7 @@ import { RadioBtnFormComponent } from './radio-btn-form/radio-btn-form.component
 import { SelectBtnFormComponent } from './select-btn-form/select-btn-form.component';
 import { ClockComponent } from './clock/clock.component';
 import { PeopleComponent } from './people/people.component';
+import { TableComponent } from './table/table.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'people',
     component: PeopleComponent
+  },
+  {
+    path: 'table',
+    component: TableComponent
   },
   {
     path: 'posts',

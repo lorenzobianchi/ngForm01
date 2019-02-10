@@ -1,0 +1,16 @@
+table {
+    height: 300px;
+    overflow: hidden;
+    .head {
+        background-color: aquamarine;
+        border: 1px solid darkblue;
+    }
+    .fix-cell {
+        background-color: midnightblue;
+        color: white;
+    }
+    tbody {
+        height: 200px;
+        overflow: scroll;
+    }
+}

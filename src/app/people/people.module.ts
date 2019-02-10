@@ -5,13 +5,15 @@ import { PeopleComponent } from './people.component';
 import { PersonEditComponent } from '../person-edit/person-edit.component';
 import { ChildComponent } from './child.component';
 import { PersonComponent } from '../person/person.component';
+import { WomanComponent } from '../woman/woman.component';
 
 @NgModule({
   declarations: [
     PeopleComponent,
     PersonEditComponent,
     ChildComponent,
-    PersonComponent
+    PersonComponent,
+    WomanComponent
   ],
   providers: [PeopleService],
   imports: [

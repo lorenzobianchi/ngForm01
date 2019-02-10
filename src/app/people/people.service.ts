@@ -8,7 +8,8 @@ export class PeopleService {
   getPeople() {
     return {
       name: this.name,
-      age: 37
+      age: 37,
+      gender: 'm'
     };
   }
 

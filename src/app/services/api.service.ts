@@ -19,6 +19,7 @@ export interface Post {
 })
 export class ApiService {
   postEndPoint = 'http://localhost:3000/posts';
+  usersEndPoint = 'http://localhost:3000/users';
 
   constructor(private http: HttpClient) { }
 
@@ -28,6 +29,10 @@ export class ApiService {
 
   addNewPost(newPost: any) {
     return this.http.post(this.postEndPoint, newPost);
+  }
+
+  getUsers(): Observable<any> {
+    return this.http.get(this.usersEndPoint);
   }
 
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap, startWith } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs'
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-post',
@@ -20,7 +20,7 @@ export class PostComponent implements OnInit {
       map((p: any) => p.id),
       switchMap(id => this.http.get('http://localhost:3000/posts/' + id)),
       // startWith({title: 'Loading...', data: {body: ''}})
-    ).subscribe(this.post$)
+    ).subscribe(this.post$);
   }
 
   ngOnInit() {
