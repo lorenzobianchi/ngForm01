@@ -16,6 +16,8 @@ import { PeopleModule } from './people/people.module';
 import { NewLoggerService } from './services/new-logger.service';
 import { ConsoleWriterService } from './services/console-writer.service';
 import { TableComponent } from './table/table.component';
+import { SoundsComponent } from './sounds/sounds.component';
+import { SoundComponent } from './sounds/sound.component';
 
 const simpleLogger = {
   log(msg: string) {
@@ -36,6 +38,8 @@ const loggerFactory = (writer: ConsoleWriterService) => {
     SelectBtnFormComponent,
     ClockComponent,
     TableComponent,
+    SoundsComponent,
+    SoundComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { SelectBtnFormComponent } from './select-btn-form/select-btn-form.compon
 import { ClockComponent } from './clock/clock.component';
 import { PeopleComponent } from './people/people.component';
 import { TableComponent } from './table/table.component';
+import { SoundsComponent } from './sounds/sounds.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'table',
     component: TableComponent
+  },
+  {
+    path: 'sounds',
+    component: SoundsComponent
   },
   {
     path: 'posts',
